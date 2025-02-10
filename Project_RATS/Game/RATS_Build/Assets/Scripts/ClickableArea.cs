@@ -30,6 +30,7 @@ public class ClickableArea : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("on mouse down");
         if (!EventSystem.current.IsPointerOverGameObject())
         {
             if (PlayerController.currentState == PlayerController.States.nothing)
@@ -52,5 +53,6 @@ public class ClickableArea : MonoBehaviour
 
             }
         }
+        
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.EventSystems;
 
 public class DialogueController : MonoBehaviour
 {
@@ -15,12 +16,12 @@ public class DialogueController : MonoBehaviour
     List<string> NightLate;
     public GameObject timeController;
     GameTime timeScript;
-    List<string> lines;
+    public List<string> lines;
     
     //public string[] lines; //these are the actual lines of dialogue displayed on-screen (assign through inspector)
     public float textSpeed; //intervals in seconds between each character displayed
 
-    private int index = 0; //what line of dialogue is currently displayed
+    private int lineIndex = 0; //what line of dialogue is currently displayed
     //public GameObject dialogueBox; //references the UI to enable and disable it
     public GameObject dialogueBox;
 
@@ -69,7 +70,7 @@ public class DialogueController : MonoBehaviour
     void Update()
     {
         Debug.Log(timeScript.WhatTimeIsIt());
-        if (Input.GetMouseButtonDown(0) && PlayerController.currentState != PlayerController.States.moving) //text only runs if the player is NOT MOVING!
+        if (Input.GetMouseButtonDown(0) && PlayerController.currentState != PlayerController.States.moving && !EventSystem.current.IsPointerOverGameObject()) //text only runs if the player is NOT MOVING!
         {
             if (lines.Count == 0)
             {
@@ -92,7 +93,7 @@ public class DialogueController : MonoBehaviour
             }
             else
             {
-                if (textComponent.text == lines[index])
+                if (textComponent.text == lines[lineIndex])
                 {
                     dialogueBox.SetActive(true);
                     NextLine();
@@ -100,7 +101,7 @@ public class DialogueController : MonoBehaviour
                 else
                 {
                     StopAllCoroutines();
-                    textComponent.text = lines[index];
+                    textComponent.text = lines[lineIndex];
                 }
             }
         }
@@ -127,7 +128,7 @@ public class DialogueController : MonoBehaviour
             lines = NightLate;
         }
         //resets the text
-        index = 0;
+        lineIndex = 0;
         textComponent.text = string.Empty;
 
         //turns on UI
@@ -142,17 +143,24 @@ public class DialogueController : MonoBehaviour
 
     IEnumerator TypeLine() //types out each character
     {
-        Debug.Log(index);
-        foreach(char c in lines[index].ToCharArray())
+        Debug.Log(lineIndex);
+        if(lines.Count <= 0)
         {
-            textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            Debug.Log("lines empty");
+        } 
+        else
+        {
+            foreach(char c in lines[lineIndex].ToCharArray())
+            {
+                textComponent.text += c;
+                yield return new WaitForSeconds(textSpeed);
+            }
         }
     }
 
     void NextLine() //moves to next line or ends convo if no more lines are available
     {
-        if (index == 0)
+        if (lineIndex == 0)
         {
             if (timeScript.WhatTimeIsIt() == DaySlot.hour.EarlyDay)
             {
@@ -171,9 +179,9 @@ public class DialogueController : MonoBehaviour
                 lines = NightLate;
             }
         }
-        if (index < lines.Count - 1)
+        if (lineIndex < lines.Count - 1)
         {
-            index++;
+            lineIndex++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
             dialogueBox.SetActive(true);
@@ -182,7 +190,7 @@ public class DialogueController : MonoBehaviour
         {
             lines = new List<string>();
             PlayerController.currentState = PlayerController.States.nothing;
-            //index = 0;
+            //lineIndex = 0;
             dialogueBox.SetActive(false);
         }
     }
