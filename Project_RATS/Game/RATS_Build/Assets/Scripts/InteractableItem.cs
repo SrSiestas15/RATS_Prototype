@@ -19,10 +19,14 @@ public class InteractableItem : MonoBehaviour
         {
             itemRB = GetComponent<Rigidbody2D>();
             itemRB.AddForce(Vector2.left * 100);
+
+            TelemetryLogger.Log(this, "Pushes");
         } 
         else if (chosenAction == typeOfAction.door)
         {
             SceneManager.LoadScene(sceneName);
+
+            TelemetryLogger.Log(this, "Enterings");
         }
 
     }
