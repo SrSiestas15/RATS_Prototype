@@ -10,23 +10,22 @@ public class GameTime : MonoBehaviour
     public GameObject clockHUDObject;
     public Canvas canvas;
     TextMeshProUGUI clockText;
-    CurrentTime currentHour;
+    public static float currentHour = 0;
     public GameObject tempDay; //switches to night at 5 pm
     public GameObject tempSunset;//switches to day at 10 pm
     public GameObject tempNight;//switches to day at 10 pm
     public GameObject tempReset;//switches to day at 10 pm
-    [SerializeField] CurrentTime whenToSunset;
-    [SerializeField] CurrentTime whenToNight;
+    public float whenToSunset;
+    public float whenToNight;
 
-
-
+    public BackgroundController bgController;
 
     enum CurrentTime {Noon, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, ResetHour};
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHour = CurrentTime.Noon;
+        currentHour = PlayerPrefs.GetFloat("currentHour");
         clockText = clockHUDObject.GetComponent<TextMeshProUGUI>();
     }
 
@@ -39,23 +38,11 @@ public class GameTime : MonoBehaviour
                 break;
             case 4:
                 int passageHolder = 4;
-                //if (currentHour == CurrentTime.Six)
-                //{
-                //    currentHour = CurrentTime.Noon;
-                //    passageHolder = 0;
-                //}
-                //else if (currentHour > CurrentTime.Six) 
-                //{
-                //    int hoursLeft = 10;
-                //    hoursLeft = hoursLeft - ((int)currentHour);
-                //    passageHolder = passageHolder - hoursLeft;
-                //    currentHour = CurrentTime.Noon;
-                //}
                 currentHour += passageHolder;
                 break;
         }
 
-        if(CurrentTime.Noon <= currentHour && currentHour < whenToSunset)
+        if(0 <= currentHour && currentHour < whenToSunset)
         {
             tempDay.SetActive(true);
             tempNight.SetActive(false);
@@ -67,14 +54,14 @@ public class GameTime : MonoBehaviour
             tempSunset.SetActive(true);
             Debug.Log("activate second");
         }
-        else if (whenToNight <= currentHour && currentHour < CurrentTime.ResetHour)
+        else if (whenToNight <= currentHour && currentHour < 11)
         {
             tempSunset.SetActive(false);
             tempNight.SetActive(true);
             Debug.Log("activate second");
         }
 
-        if (currentHour >= CurrentTime.ResetHour)
+        if (currentHour >= 11)
         {
             StartCoroutine(ResetDay());
         }
@@ -82,15 +69,15 @@ public class GameTime : MonoBehaviour
 
     public DaySlot.hour WhatTimeIsIt()
     {
-        if ((currentHour >= CurrentTime.Noon) && (currentHour < CurrentTime.Three))
+        if ((currentHour >= 0) && (currentHour < 3))
         {
             return DaySlot.hour.EarlyDay;
         }
-        else if ((currentHour >= CurrentTime.Three) && (currentHour < CurrentTime.Five))
+        else if ((currentHour >= 3) && (currentHour < 5))
         {
             return DaySlot.hour.LateDay;
         }
-        else if ((currentHour >= CurrentTime.Five) && (currentHour < CurrentTime.Seven))
+        else if ((currentHour >= 5) && (currentHour < 7))
         {
             return DaySlot.hour.EarlyNight;
         }
@@ -104,31 +91,32 @@ public class GameTime : MonoBehaviour
     {
         switch (currentHour) //this will handle active changes between hours
         {
-            case CurrentTime.Noon:
+            case 0:
                 break;
-            case CurrentTime.One:
+            case 1:
                 break;
-            case CurrentTime.Two:
+            case 2:
                 break;
-            case CurrentTime.Three:
+            case 3:
                 break;
-            case CurrentTime.Four:
+            case 4:
                 break;
-            case CurrentTime.Five:
+            case 5:
                 break;
-            case CurrentTime.Six:
+            case 6:
                 break;
-            case CurrentTime.Seven:
+            case 7:
                 break;
-            case CurrentTime.Eight:
+            case 8:
                 break;
-            case CurrentTime.Nine:
+            case 9:
                 break;
-            case CurrentTime.Ten:
+            case 10:
                 break;
-            case CurrentTime.ResetHour:
+            case 11:
                 break;
         }
+
         clockText.text = currentHour.ToString();
     }
 
@@ -142,7 +130,8 @@ public class GameTime : MonoBehaviour
     {
         tempReset.SetActive(true);
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(0);
-        currentHour = CurrentTime.Noon;
+        
+        PlayerPrefs.SetFloat("currentHour", 0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

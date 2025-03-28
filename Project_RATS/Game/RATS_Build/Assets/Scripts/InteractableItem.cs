@@ -22,6 +22,7 @@ public class InteractableItem : MonoBehaviour
         } 
         else if (chosenAction == typeOfAction.door)
         {
+            PlayerPrefs.SetFloat("currentHour", GameTime.currentHour);
             SceneManager.LoadScene(sceneName);
         }
 
