@@ -27,20 +27,6 @@ public class GameTime : MonoBehaviour
     {
         currentHour = PlayerPrefs.GetFloat("currentHour");
         clockText = clockHUDObject.GetComponent<TextMeshProUGUI>();
-    }
-
-    public void XHoursLater(int hours)
-    {
-        switch (hours)
-        {
-            case 1:
-                currentHour = currentHour + 1;
-                break;
-            case 4:
-                int passageHolder = 4;
-                currentHour += passageHolder;
-                break;
-        }
 
         if(0 <= currentHour && currentHour < whenToSunset)
         {
@@ -60,6 +46,38 @@ public class GameTime : MonoBehaviour
             tempNight.SetActive(true);
             Debug.Log("activate second");
         }
+    }
+
+    public void XHoursLater(int hours)
+    {
+
+        switch (hours)
+        {
+            case 1:
+                currentHour = currentHour + 1;
+                break;
+            case 4:
+                int passageHolder = 4;
+                currentHour += passageHolder;
+                break;
+        }
+
+        if (0 <= currentHour && currentHour < whenToSunset)
+        {
+            tempDay.SetActive(true);
+            tempNight.SetActive(false);
+        }
+        else if (whenToSunset <= currentHour && currentHour < whenToNight)
+        {
+            tempDay.SetActive(false);
+            tempSunset.SetActive(true);
+        }
+        else if (whenToNight <= currentHour && currentHour < 11)
+        {
+            tempSunset.SetActive(false);
+            tempNight.SetActive(true);
+        }
+
 
         if (currentHour >= 11)
         {

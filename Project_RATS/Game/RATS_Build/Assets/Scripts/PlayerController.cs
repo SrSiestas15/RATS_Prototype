@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {        
+        //Vector3 spawnPos SPAWN AT POSITION BASED ON PLAYER PREF (REF INTERACTABLE ITEM SCRIPT)
+        //transform.position.x = 
         clickDestination = transform.position; //makes the first destination the current position    
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.VFX;
 
 public class InteractableItem : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class InteractableItem : MonoBehaviour
 
     public enum typeOfAction { push, door }
     public typeOfAction chosenAction;
+
+    [SerializeField] float XSpawnPos;
 
     public string sceneName;
 
@@ -23,6 +26,8 @@ public class InteractableItem : MonoBehaviour
         else if (chosenAction == typeOfAction.door)
         {
             PlayerPrefs.SetFloat("currentHour", GameTime.currentHour);
+            PlayerPrefs.SetFloat("spawnX", XSpawnPos);
+
             SceneManager.LoadScene(sceneName);
         }
 

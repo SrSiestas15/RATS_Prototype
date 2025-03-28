@@ -149,8 +149,8 @@ public class DialogueController : MonoBehaviour
         {
             lines = new List<string>();
             PlayerController.currentState = PlayerController.States.nothing;
-            //index = 0;
             dialogueBox.SetActive(false);
+            timeScript.XHoursLater(1);
         }
     }
 }
