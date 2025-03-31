@@ -38,7 +38,7 @@ public class ClickableArea : MonoBehaviour
                 {
                     destinationPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
 
-                    TelemetryLogger.Log(this, "Floor: Clicks");
+                    TelemetryLogger.Log(this, "Floor: Clicks", destinationPos);
                 }
                 else
                 {
@@ -50,24 +50,12 @@ public class ClickableArea : MonoBehaviour
                 {
                     playerScript.MoveToAndAct(destinationPos, gameObject);
 
-                    var data = new ClickData()
-                    {
-                        target = name,
-                        mousePos = transform.position,
-                    };
-
-                    TelemetryLogger.Log(this, "GameObjects: Clicks", Input.mousePosition);
+                    TelemetryLogger.Log(this, "GameObjects: Clicks", destinationPos);
                 }
                 else playerScript.MoveTo(destinationPos);
             }
         }
 
-        TelemetryLogger.Log(this, "Clicks");
-    }
-
-    public struct ClickData
-    {
-        public string target;
-        public Vector3 mousePos;
+        TelemetryLogger.Log(this, "Clicks", destinationPos);
     }
 }
