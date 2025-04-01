@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Entrance.unity
     guid: 46bc2f8d6e7d9f648a6c947e893942e8
+  - enabled: 1
+    path: Assets/Scenes/SafeTest.unity
+    guid: 13e2c0cf1f052594287651a72a0c27a6
   m_configObjects: {}
