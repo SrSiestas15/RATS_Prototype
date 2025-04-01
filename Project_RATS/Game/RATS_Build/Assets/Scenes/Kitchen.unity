@@ -11490,6 +11490,7 @@ MonoBehaviour:
   dayBG: {fileID: 0}
   sunsetBG: {fileID: 0}
   nightBG: {fileID: 0}
+  sr: {fileID: 0}
 --- !u!1 &2004761271
 GameObject:
   m_ObjectHideFlags: 0
