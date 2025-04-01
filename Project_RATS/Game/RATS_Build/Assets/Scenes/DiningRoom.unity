@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804c35fd693a8d747bd1fca6f0b21d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  repeatLines: 0
   NPCName: Mayor
   DayEarlyLines:
   - Hello. You're awake quite early aren't you?
@@ -7962,7 +7963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chosenAction: 1
   XSpawnPos: 7
-  sceneName: TestScene2
+  sceneName: Entrance
 --- !u!61 &870676542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11192,7 +11193,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395869778}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
