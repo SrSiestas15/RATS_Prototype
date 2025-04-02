@@ -19,19 +19,24 @@ public class PlayerController : MonoBehaviour
     InteractableItem currentAction; 
     DialogueController currentDialogue;
 
+    Animator playerAnimator;
+
     private void Start()
     {        
         Vector3 spawnPos = new Vector3 (PlayerPrefs.GetFloat("spawnX"), -4.5f, 0);
         transform.position = spawnPos; 
         clickDestination = transform.position; //makes the first destination the current position    
+        playerAnimator = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
+
         toDestination = clickDestination - transform.position; //gets direction towarfs end destination
 
         if(currentState == States.moving) //if the player is currently moving
         {
+            playerAnimator.SetBool("idle", false);
             transform.Translate((toDestination).normalized * Time.deltaTime * moveSpeed); //move logic fix missing deltaTime definitions
             if(toDestination.magnitude < .2f) //if reached the goal
             {
@@ -47,8 +52,27 @@ public class PlayerController : MonoBehaviour
                 }
                 else currentState = States.nothing; //if the goal is reached and there's nothing for the player to do, just set state back to regular
             }
+            if (Mathf.Sign(toDestination.x) == 1)
+            {
+                playerAnimator.SetBool("walkRight", true);
+                playerAnimator.SetBool("walkLeft", false);
+            }
+            if (Mathf.Sign(toDestination.x) == -1) 
+            {
+                playerAnimator.SetBool("walkLeft", true);
+                playerAnimator.SetBool("walkRight", false);
+
+            }
+            
         }
 
+        if(currentState == States.nothing || currentState == States.talking)
+        {
+            playerAnimator.SetBool("idle", true);
+            playerAnimator.SetBool("walkLeft", false);
+            playerAnimator.SetBool("walkRight", false);
+
+        }
     }
 
     //the following functions are called through 'clickableArea.cs'
