@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {        
-        Vector3 spawnPos = new Vector3 (PlayerPrefs.GetFloat("spawnX"), -3, 0);
+        Vector3 spawnPos = new Vector3 (PlayerPrefs.GetFloat("spawnX"), -4.5f, 0);
         transform.position = spawnPos; 
         clickDestination = transform.position; //makes the first destination the current position    
     }

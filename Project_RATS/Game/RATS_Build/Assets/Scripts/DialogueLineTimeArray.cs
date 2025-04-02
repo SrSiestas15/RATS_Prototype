@@ -9,18 +9,16 @@ public class DialogueLineTimeArray : MonoBehaviour //ScriptableObject
 {
     [SerializeField] bool repeatLines;
     public string NPCName;
-    public List<string> DayEarlyLines;
-    public List<string> DayLateLines;
-    public List<string> NightEarlyLines;
-    public List<string> NightLateLines;
+    public List<string> DayLines;
+    public List<string> SunsetLines;
+    public List<string> NightLines;
 
     private void Start()
     {
         if (repeatLines)
         {
-            DayLateLines = DayEarlyLines;
-            NightEarlyLines = DayEarlyLines;
-            NightLateLines = DayEarlyLines;
+            SunsetLines = DayLines;
+            NightLines = DayLines;
         }
     }
 

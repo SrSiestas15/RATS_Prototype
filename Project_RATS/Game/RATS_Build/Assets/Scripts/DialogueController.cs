@@ -10,10 +10,9 @@ public class DialogueController : MonoBehaviour
 {
     public TextMeshProUGUI textComponent; //text in box referenced in the inspector
     DialogueLineTimeArray dialogueArray;
-    List<string> DayEarly;
-    List<string> DayLate;
-    List<string> NightEarly;
-    List<string> NightLate;
+    List<string> Day;
+    List<string> Sunset;
+    List<string> Night;
     public GameObject timeController;
     GameTime timeScript;
     List<string> lines;
@@ -38,26 +37,21 @@ public class DialogueController : MonoBehaviour
         textComponent.text = string.Empty; //start text empty
         timeScript = timeController.GetComponent<GameTime>();
         lines = new List<string>();
-        DayEarly = new List<string>();
-        DayLate = new List<string>();
-        NightEarly = new List<string>();
-        NightLate = new List<string>();
+        Day = new List<string>();
+        Sunset = new List<string>();
+        Night = new List<string>();
         //Debug.Log(dialogueArray.DayEarlyLines.Count);
-        for (int i = 0; i < dialogueArray.DayEarlyLines.Count; i++)
+        for (int i = 0; i < dialogueArray.DayLines.Count; i++)
         {
-            DayEarly.Add(dialogueArray.DayEarlyLines[i]);
+            Day.Add(dialogueArray.DayLines[i]);
         }
-        for (int i = 0; i < dialogueArray.DayLateLines.Count; i++)
+        for (int i = 0; i < dialogueArray.SunsetLines.Count; i++)
         {
-            DayLate.Add(dialogueArray.DayLateLines[i]);
+            Sunset.Add(dialogueArray.SunsetLines[i]);
         }
-        for (int i = 0; i < dialogueArray.NightEarlyLines.Count; i++)
+        for (int i = 0; i < dialogueArray.NightLines.Count; i++)
         {
-            NightEarly.Add(dialogueArray.NightEarlyLines[i]);
-        }
-        for (int i = 0; i < dialogueArray.NightLateLines.Count; i++)
-        {
-            NightLate.Add(dialogueArray.NightLateLines[i]);
+            Night.Add(dialogueArray.NightLines[i]);
         }
         if (gameObject.GetComponent<DialogueLineTimeArray>() == null)
         {
@@ -96,22 +90,19 @@ public class DialogueController : MonoBehaviour
 
         lines.Clear();
         dialogueBox.SetActive(true);
-        if (timeScript.WhatTimeIsIt() == DaySlot.hour.EarlyDay)
+        if (timeScript.WhatTimeIsIt() == DaySlot.hour.Day)
         {
-            lines = DayEarly;
+            lines = Day;
         }
-        else if (timeScript.WhatTimeIsIt() == DaySlot.hour.LateDay)
+        else if (timeScript.WhatTimeIsIt() == DaySlot.hour.Sunset)
         {
-            lines = DayLate;
+            lines = Sunset;
         }
-        else if (timeScript.WhatTimeIsIt() == DaySlot.hour.EarlyNight)
+        else if (timeScript.WhatTimeIsIt() == DaySlot.hour.Night)
         {
-            lines = NightEarly;
+            lines = Night;
         }
-        else
-        {
-            lines = NightLate;
-        }
+
         //resets the text
         index = 0;
         textComponent.text = withName;

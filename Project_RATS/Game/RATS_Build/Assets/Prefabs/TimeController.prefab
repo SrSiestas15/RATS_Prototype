@@ -44,7 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7d145c02b810d439dc8d86d2e32d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hudClockObject: {fileID: 0}
+  clockHUDObject: {fileID: 0}
   canvas: {fileID: 0}
   tempDay: {fileID: 0}
+  tempSunset: {fileID: 0}
   tempNight: {fileID: 0}
+  tempReset: {fileID: 0}
+  whenToSunset: 5
+  whenToNight: 6
+  bgController: {fileID: 0}

@@ -9,5 +9,5 @@ using UnityEngine.UIElements;
 
 public class DaySlot : ScriptableObject
 {
-    public enum hour {EarlyDay, LateDay, EarlyNight, LateNight}
+    public enum hour {Day, Sunset, Night}
 }

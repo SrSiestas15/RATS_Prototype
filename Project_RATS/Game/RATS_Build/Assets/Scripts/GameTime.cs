@@ -87,21 +87,17 @@ public class GameTime : MonoBehaviour
 
     public DaySlot.hour WhatTimeIsIt()
     {
-        if ((currentHour >= 0) && (currentHour < 3))
+        if ((currentHour >= 0) && (currentHour <= 4))
         {
-            return DaySlot.hour.EarlyDay;
+            return DaySlot.hour.Day;
         }
-        else if ((currentHour >= 3) && (currentHour < 5))
+        else if (currentHour == 5)
         {
-            return DaySlot.hour.LateDay;
-        }
-        else if ((currentHour >= 5) && (currentHour < 7))
-        {
-            return DaySlot.hour.EarlyNight;
+            return DaySlot.hour.Sunset;
         }
         else
         {
-            return DaySlot.hour.LateNight;
+            return DaySlot.hour.Night;
         }
     }
 
