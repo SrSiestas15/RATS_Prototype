@@ -26,7 +26,6 @@ public class InteractableItem : MonoBehaviour
             itemRB = GetComponent<Rigidbody2D>();
             itemRB.AddForce(Vector2.left * 100);
 
-            TelemetryLogger.Log(this, "Pushes", destinationPos);
         } 
         else if (chosenAction == typeOfAction.door)
         {
@@ -34,8 +33,6 @@ public class InteractableItem : MonoBehaviour
             PlayerPrefs.SetFloat("spawnX", XSpawnPos);
 
             SceneManager.LoadScene(sceneName);
-
-            TelemetryLogger.Log(this, "Entering Room", destinationPos);
         }
 
     }

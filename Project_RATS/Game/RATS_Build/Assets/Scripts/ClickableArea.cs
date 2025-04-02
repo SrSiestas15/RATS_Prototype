@@ -17,6 +17,7 @@ public class ClickableArea : MonoBehaviour
     private Vector3 destinationPos;
 
     private PlayerController playerScript;
+    private Camera camera;
 
     void Start()
     {
@@ -26,10 +27,14 @@ public class ClickableArea : MonoBehaviour
         {
             hasAction = true;
         }
+
+        camera = FindAnyObjectByType<Camera>();
     }
 
     private void OnMouseDown()
     {
+        TelemetryLogger.Log(this, gameObject.name, camera.ScreenToWorldPoint(Input.mousePosition));
+
         if (!EventSystem.current.IsPointerOverGameObject())
         {
             if (PlayerController.currentState == PlayerController.States.nothing)
@@ -49,13 +54,9 @@ public class ClickableArea : MonoBehaviour
                 if (hasAction)
                 {
                     playerScript.MoveToAndAct(destinationPos, gameObject);
-
-                    TelemetryLogger.Log(this, "GameObjects: Clicks", destinationPos);
                 }
                 else playerScript.MoveTo(destinationPos);
             }
         }
-
-        TelemetryLogger.Log(this, "Clicks", destinationPos);
     }
 }
