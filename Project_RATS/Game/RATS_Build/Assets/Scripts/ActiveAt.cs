@@ -7,6 +7,8 @@ public class ActiveAt : MonoBehaviour
     public GameObject activateGameObject;
     public float[] timesActive;
 
+    private bool checkedYet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +18,18 @@ public class ActiveAt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (float time in timesActive)
+        if(activateGameObject.activeInHierarchy == false)
         {
-            if (time == GameTime.currentHour)
+            foreach (float time in timesActive)
             {
-                activateGameObject.SetActive(true);
-                return;
+                if (time == GameTime.currentHour)
+                {
+                    Debug.Log("activate");
+                    activateGameObject.SetActive(true);
+                    return;
+                }
+                else activateGameObject.SetActive(false);
             }
-            else activateGameObject.SetActive(false);
         }
     }
 }

@@ -314,7 +314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &63339418
 Transform:
   m_ObjectHideFlags: 0
@@ -437,7 +437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &567815151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,10 +451,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repeatLines: 0
-  NPCName: Mayor
-  DayLines: []
-  SunsetLines: []
-  NightLines: []
+  NPCName: 
+  DayLines:
+  - ...
+  SunsetLines:
+  - ...
+  NightLines:
+  - Oh! Who are you? Oh, right. You must be one of the cops we called for hours go.
+  - Old man Jebediah has lost his head. Not literally of course, forgive my language...
+    I mean seimply that he's gone mad.
+  - He was screaming something about protection and an eye for an eye. He opened
+    the safe, but I'm not sure what he grabbed from inside.
+  - He was muttering about his birthdate while putting in the combination. This is
+    the Berryl mansion, so there may be some clue around.
 --- !u!114 &567815152
 MonoBehaviour:
   m_ObjectHideFlags: 0

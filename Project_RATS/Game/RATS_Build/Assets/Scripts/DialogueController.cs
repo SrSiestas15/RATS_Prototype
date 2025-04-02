@@ -77,8 +77,9 @@ public class DialogueController : MonoBehaviour
                     dialogueBox.SetActive(true);
                     NextLine();
                 }
-                else
+                else if(textComponent.text != string.Empty)
                 {
+                Debug.Log("Skip ahead");
                     StopAllCoroutines();
                     textComponent.text = withName + lines[index];
                 }
@@ -87,9 +88,7 @@ public class DialogueController : MonoBehaviour
 
     public void StartDialogue() //this gets called through the player controller, after moving to a NPC
     {
-
         lines.Clear();
-        dialogueBox.SetActive(true);
         if (timeScript.WhatTimeIsIt() == DaySlot.hour.Day)
         {
             lines = Day;
@@ -119,7 +118,6 @@ public class DialogueController : MonoBehaviour
 
     IEnumerator TypeLine() //types out each character
     {
-        //Debug.Log(index);
         foreach(char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
@@ -138,6 +136,7 @@ public class DialogueController : MonoBehaviour
         }
         else
         {
+            textComponent.text = withName;
             lines = new List<string>();
             PlayerController.currentState = PlayerController.States.nothing;
             dialogueBox.SetActive(false);

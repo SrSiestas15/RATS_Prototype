@@ -414,7 +414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &638760653
 Transform:
   m_ObjectHideFlags: 0
@@ -8639,7 +8639,9 @@ MonoBehaviour:
   repeatLines: 0
   NPCName: 
   DayLines:
-  - books day
+  - books day 1
+  - books day 2
+  - books day 3
   SunsetLines:
   - books sunset
   NightLines:

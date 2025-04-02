@@ -18,8 +18,6 @@ public class GameTime : MonoBehaviour
     public float whenToSunset;
     public float whenToNight;
 
-    public BackgroundController bgController;
-
     enum CurrentTime {Noon, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, ResetHour};
 
     // Start is called before the first frame update
