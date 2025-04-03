@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Entrance.unity
+    guid: 46bc2f8d6e7d9f648a6c947e893942e8
+  - enabled: 1
     path: Assets/Scenes/DiningRoom.unity
     guid: 95ea75c36c68fc64dacd71368fcff8e8
   - enabled: 1
     path: Assets/Scenes/Kitchen.unity
     guid: 44e850111db96fc46a05bcfef9a1d5a2
-  - enabled: 1
-    path: Assets/Scenes/Entrance.unity
-    guid: 46bc2f8d6e7d9f648a6c947e893942e8
   - enabled: 1
     path: Assets/Scenes/SafeTest.unity
     guid: 13e2c0cf1f052594287651a72a0c27a6

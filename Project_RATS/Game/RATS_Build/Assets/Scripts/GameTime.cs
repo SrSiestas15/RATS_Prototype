@@ -15,6 +15,7 @@ public class GameTime : MonoBehaviour
     public GameObject tempSunset;//switches to day at 10 pm
     public GameObject tempNight;//switches to day at 10 pm
     public GameObject tempReset;//switches to day at 10 pm
+    public GameObject tempSwitch;
     public float whenToSunset;
     public float whenToNight;
 
@@ -30,19 +31,16 @@ public class GameTime : MonoBehaviour
         {
             tempDay.SetActive(true);
             tempNight.SetActive(false);
-            Debug.Log("activate first");
         } 
         else if(whenToSunset <= currentHour && currentHour < whenToNight)
         {
             tempDay.SetActive(false);
             tempSunset.SetActive(true);
-            Debug.Log("activate second");
         }
         else if (whenToNight <= currentHour && currentHour < 11)
         {
             tempSunset.SetActive(false);
             tempNight.SetActive(true);
-            Debug.Log("activate second");
         }
     }
 
@@ -81,6 +79,12 @@ public class GameTime : MonoBehaviour
         {
             StartCoroutine(ResetDay());
         }
+
+        if (currentHour == whenToNight)
+        {
+            StartCoroutine(ToNight());
+        }
+
     }
 
     public DaySlot.hour WhatTimeIsIt()
@@ -141,9 +145,17 @@ public class GameTime : MonoBehaviour
     IEnumerator ResetDay() //types out each character
     {
         tempReset.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         
         PlayerPrefs.SetFloat("currentHour", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    IEnumerator ToNight() //types out each character
+    {
+        tempSwitch.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        tempSwitch.SetActive(false);
+        XHoursLater(1);
     }
 }

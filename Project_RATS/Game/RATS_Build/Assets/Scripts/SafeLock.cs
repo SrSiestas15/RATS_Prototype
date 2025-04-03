@@ -17,7 +17,7 @@ public class SafeLock : MonoBehaviour
     public GameObject thousands;
     SafeDigit thousandsCode;
 
-    bool locked = true;
+    public static bool locked = true;
     public GameObject lightObj;
     Image lightSprite;
     
@@ -37,6 +37,7 @@ public class SafeLock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetString("locked", "false");
         thousandsCode = thousands.GetComponent<SafeDigit>();
         hundredsCode = hundreds.GetComponent<SafeDigit>();
         tensCode = tens.GetComponent<SafeDigit>();
@@ -91,6 +92,7 @@ public class SafeLock : MonoBehaviour
     {
         if (TickPass(digitOne, digitTwo, digitThree, digitFour))
         {
+            PlayerPrefs.SetString("locked", "true");
             locked = false;
             lightSprite.color = Color.green;
         }

@@ -298,6 +298,143 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &265311531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265311536}
+  - component: {fileID: 265311535}
+  - component: {fileID: 265311534}
+  - component: {fileID: 265311533}
+  - component: {fileID: 265311532}
+  m_Layer: 0
+  m_Name: Table
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &265311532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265311531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804c35fd693a8d747bd1fca6f0b21d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatLines: 0
+  NPCName: 
+  DayLines:
+  - It's a table split in half. The two halves now lean on each other, keeping the
+    table upright.
+  - You're tempted to lightly tap them, knocking them over. You can't bring yourself
+    to disrupt the balance though.
+  SunsetLines:
+  - Is the sun going down? It's almost night.
+  NightLines:
+  - There's a small drawer on the front of the table. Maybe there's something inside.
+  - 'You open the drawer and see nothing but a single playing card. It doesn''t even
+    have a suit: it''s just the company''s logo.'
+--- !u!114 &265311533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265311531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25859bc3bed7d7548a69c581dd28d182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 371000605}
+  timeController: {fileID: 1506116419}
+  includeName: 0
+  textSpeed: 0.1
+  dialogueBox: {fileID: 743200860}
+--- !u!114 &265311534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265311531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f6f6cda12f44478c59f2156da8dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFloor: 0
+  destinationTransform: {fileID: 1935322439}
+--- !u!61 &265311535
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265311531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.23, y: 3.21}
+  m_EdgeRadius: 0
+--- !u!4 &265311536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265311531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.8, y: -2.69, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1935322439}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341779087 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 443673596503594638, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
@@ -389,6 +526,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &534164034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534164035}
+  m_Layer: 0
+  m_Name: walkTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &534164035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534164034}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1084640874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &638760652
 GameObject:
@@ -8093,6 +8261,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &943041839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943041840}
+  m_Layer: 0
+  m_Name: walkTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &943041840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943041839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1043413588}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &964911129
 GameObject:
   m_ObjectHideFlags: 0
@@ -8185,6 +8384,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFloor: 1
   destinationTransform: {fileID: 0}
+--- !u!1 &965282504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3126766924333992989, guid: cf0cf4420a219d74bb8807057f4cabaa, type: 3}
+  m_PrefabInstance: {fileID: 638763077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1030426402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8216,11 +8420,15 @@ PrefabInstance:
     - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
       propertyPath: tempReset
       value: 
-      objectReference: {fileID: 805598786}
+      objectReference: {fileID: 965282504}
     - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
       propertyPath: tempSunset
       value: 
       objectReference: {fileID: 1988295146}
+    - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
+      propertyPath: tempSwitch
+      value: 
+      objectReference: {fileID: 2095068713}
     - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
       propertyPath: whenToNight
       value: 6
@@ -8278,6 +8486,139 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
+--- !u!1 &1043413583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1043413588}
+  - component: {fileID: 1043413587}
+  - component: {fileID: 1043413586}
+  - component: {fileID: 1043413585}
+  - component: {fileID: 1043413584}
+  m_Layer: 0
+  m_Name: Broken Clock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1043413584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043413583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804c35fd693a8d747bd1fca6f0b21d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatLines: 0
+  NPCName: 
+  DayLines:
+  - 'It''s snapped in half. The hands aren''t moving. You peek inside the broken
+    wood: maggots have made their home in the clock''s corpse.'
+  SunsetLines:
+  - The clock hands haven't moved, but from the change in lighting you can tell the
+    sun is setting. Everything is bathed in an orange glow.
+  NightLines: []
+--- !u!114 &1043413585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043413583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25859bc3bed7d7548a69c581dd28d182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 371000605}
+  timeController: {fileID: 1506116419}
+  includeName: 0
+  textSpeed: 0.1
+  dialogueBox: {fileID: 743200860}
+--- !u!114 &1043413586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043413583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f6f6cda12f44478c59f2156da8dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFloor: 0
+  destinationTransform: {fileID: 943041840}
+--- !u!61 &1043413587
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043413583}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.57, y: 3.38}
+  m_EdgeRadius: 0
+--- !u!4 &1043413588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043413583}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.72, y: -2.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 943041840}
+  m_Father: {fileID: 1061744620}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1061744618
 GameObject:
   m_ObjectHideFlags: 0
@@ -8288,6 +8629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1061744620}
   - component: {fileID: 1061744619}
+  - component: {fileID: 1061744621}
   m_Layer: 0
   m_Name: Activator
   m_TagString: Untagged
@@ -8302,18 +8644,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061744618}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b90e160ef8308694eac0e8e1f8c09378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateGameObject: {fileID: 0}
+  activateGameObject: {fileID: 1043413583}
   timesActive:
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
 --- !u!4 &1061744620
 Transform:
   m_ObjectHideFlags: 0
@@ -8326,8 +8669,160 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1043413588}
+  - {fileID: 1084640874}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1061744621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061744618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90e160ef8308694eac0e8e1f8c09378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateGameObject: {fileID: 1084640869}
+  timesActive:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+--- !u!1 &1084640869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084640874}
+  - component: {fileID: 1084640873}
+  - component: {fileID: 1084640872}
+  - component: {fileID: 1084640871}
+  - component: {fileID: 1084640870}
+  m_Layer: 0
+  m_Name: Clock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1084640870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084640869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804c35fd693a8d747bd1fca6f0b21d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatLines: 0
+  NPCName: 
+  DayLines: []
+  SunsetLines: []
+  NightLines:
+  - You were expecting the hands to move, now that the clock looks fixed. They don't.
+  - Time in general seems broken in this house.
+--- !u!114 &1084640871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084640869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25859bc3bed7d7548a69c581dd28d182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 371000605}
+  timeController: {fileID: 1506116419}
+  includeName: 0
+  textSpeed: 0.1
+  dialogueBox: {fileID: 743200860}
+--- !u!114 &1084640872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084640869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f6f6cda12f44478c59f2156da8dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFloor: 0
+  destinationTransform: {fileID: 534164035}
+--- !u!61 &1084640873
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084640869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.38, y: 5.77}
+  m_EdgeRadius: 0
+--- !u!4 &1084640874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084640869}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.14, y: -1.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 534164035}
+  m_Father: {fileID: 1061744620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1084854252
 PrefabInstance:
@@ -8579,13 +9074,22 @@ MonoBehaviour:
   repeatLines: 0
   NPCName: 
   DayLines:
-  - books day 1
-  - books day 2
-  - books day 3
+  - This must have been a bookshelf at some point. Now it's rotted wood and torn-apart
+    books.
+  - You can make out some portraits through the scraps of paper littering the floor
+    and shelves.
   SunsetLines:
-  - books sunset
+  - The orange sunlight shines through the holes on the ceiling, making the pages
+    shine a warm orange.
   NightLines:
-  - books night
+  - There's so many books on the shelves that you don't know where to look. Some
+    of them cover the history of the house, its inhabitants and their lives.
+  - 'You pick up a random book titled: "The Berryl Family."'
+  - Each page has a hand-painted portrait of a different member of the family, and
+    under each picture, a caption detailing a name and date.
+  - '"Michelle Berryl - January 1792; Jebediah Berryl - July 1810; Cheryl Berryl
+    - March 1814"'
+  - These people must be long dead by now, but some of the portraits look oddly familiar.
 --- !u!114 &1542671734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8692,6 +9196,37 @@ MonoBehaviour:
   dayBG: {fileID: 0}
   sunsetBG: {fileID: 0}
   nightBG: {fileID: 0}
+--- !u!1 &1935322438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1935322439}
+  m_Layer: 0
+  m_Name: walkTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1935322439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935322438}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.96, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 265311536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1988295146
 GameObject:
   m_ObjectHideFlags: 0
@@ -8776,6 +9311,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2095068713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7204914268969478735, guid: cf0cf4420a219d74bb8807057f4cabaa, type: 3}
+  m_PrefabInstance: {fileID: 638763077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -8790,5 +9330,6 @@ SceneRoots:
   - {fileID: 870676544}
   - {fileID: 1061744620}
   - {fileID: 1542671732}
+  - {fileID: 265311536}
   - {fileID: 1084854252}
   - {fileID: 514217153}

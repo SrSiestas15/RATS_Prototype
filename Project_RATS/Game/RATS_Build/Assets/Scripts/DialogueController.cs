@@ -79,7 +79,6 @@ public class DialogueController : MonoBehaviour
                 }
                 else if(textComponent.text != string.Empty)
                 {
-                Debug.Log("Skip ahead");
                     StopAllCoroutines();
                     textComponent.text = withName + lines[index];
                 }

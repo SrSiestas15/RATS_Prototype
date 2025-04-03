@@ -7,8 +7,6 @@ public class ActiveAt : MonoBehaviour
     public GameObject activateGameObject;
     public float[] timesActive;
 
-    private bool checkedYet;
-
     // Start is called before the first frame update
     void Start()
     {

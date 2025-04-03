@@ -47,7 +47,6 @@ public class PlayerController : MonoBehaviour
                 if(currentDialogue != null)
                 {
                     currentDialogue.StartDialogue(); //begin a conversation if it has one
-                    Debug.Log("start dialogue");
                     currentState = States.talking; //switch player-state to 'talking'
                 }
                 else currentState = States.nothing; //if the goal is reached and there's nothing for the player to do, just set state back to regular
