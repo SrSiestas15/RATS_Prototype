@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa188ed3cd5ee314b91a17c5c707da0a, type: 3}
   m_Name: TelemetrySettings
   m_EditorClassIdentifier: 
-  userName: Rennicka
-  secret: 991567188
-  _version: Version-01
+  userName: Rats
+  secret: updated drought
+  _version: Playtest_00
   _serverURL: https://telemetry-js-792bae8f0c9a.herokuapp.com/
   serverCommunication: 2
   debugLogging: 0
