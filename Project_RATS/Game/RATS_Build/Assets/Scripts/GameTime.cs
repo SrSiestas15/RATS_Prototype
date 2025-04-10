@@ -39,7 +39,7 @@ public class GameTime : MonoBehaviour
             tempDay.SetActive(false);
             tempSunset.SetActive(true);
         }
-        else if (whenToNight <= currentHour && currentHour < 11)
+        else if (whenToNight <= currentHour && currentHour <= 12)
         {
             tempSunset.SetActive(false);
             tempNight.SetActive(true);
@@ -70,7 +70,7 @@ public class GameTime : MonoBehaviour
             tempDay.SetActive(false);
             tempSunset.SetActive(true);
         }
-        else if (whenToNight <= currentHour && currentHour < 11)
+        else if (whenToNight <= currentHour && currentHour < 12)
         {
             tempSunset.SetActive(false);
             tempNight.SetActive(true);
