@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     Animator playerAnimator;
 
+    private float debugTimer = 0;
+
     private void Start()
     {        
         Vector3 spawnPos = new Vector3 (PlayerPrefs.GetFloat("spawnX"), -4.5f, 0);
@@ -63,15 +65,27 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.SetBool("walkRight", false);
 
             }
-            
+
         }
 
-        if(currentState == States.nothing || currentState == States.talking)
+        if (currentState == States.nothing || currentState == States.talking)
         {
             playerAnimator.SetBool("idle", true);
             playerAnimator.SetBool("walkLeft", false);
             playerAnimator.SetBool("walkRight", false);
 
+        }
+
+
+        if (Input.GetKey(KeyCode.Tab) && Input.GetKey(KeyCode.LeftShift))
+        {
+            debugTimer += Time.deltaTime;
+        }
+        else debugTimer = 0;
+
+        if(debugTimer >= 3)
+        {
+            ResetPlayerPrefs();
         }
     }
 
@@ -95,5 +109,11 @@ public class PlayerController : MonoBehaviour
         {
             currentDialogue = clickedObject.GetComponent<DialogueController>();
         }
+    }
+
+    public static void ResetPlayerPrefs()
+    {
+        Debug.Log("reset prefs");
+        PlayerPrefs.DeleteAll();
     }
 }
