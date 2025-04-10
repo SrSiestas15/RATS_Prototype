@@ -460,7 +460,6 @@ MonoBehaviour:
   textComponent: {fileID: 1333958029}
   timeController: {fileID: 1379372767}
   includeName: 0
-  textSpeed: 0.1
   dialogueBox: {fileID: 575702327}
 --- !u!114 &543482152
 MonoBehaviour:
@@ -612,7 +611,6 @@ MonoBehaviour:
   textComponent: {fileID: 1333958029}
   timeController: {fileID: 1379372767}
   includeName: 0
-  textSpeed: 0.1
   dialogueBox: {fileID: 575702327}
 --- !u!61 &567815154
 BoxCollider2D:
@@ -6039,6 +6037,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1808180385}
   m_SourcePrefab: {fileID: 100100000, guid: cf0cf4420a219d74bb8807057f4cabaa, type: 3}
+--- !u!1 &638763078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7204914268969478735, guid: cf0cf4420a219d74bb8807057f4cabaa, type: 3}
+  m_PrefabInstance: {fileID: 638763077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &805598786
 GameObject:
   m_ObjectHideFlags: 0
@@ -8101,6 +8104,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
+--- !u!1 &840533800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2014095094450911170, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
+  m_PrefabInstance: {fileID: 840533799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!223 &840533801 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 5641287989053423013, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
@@ -8376,6 +8384,14 @@ PrefabInstance:
       propertyPath: tempSunset
       value: 
       objectReference: {fileID: 1170225177}
+    - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
+      propertyPath: tempSwitch
+      value: 
+      objectReference: {fileID: 638763078}
+    - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
+      propertyPath: timeDisplay
+      value: 
+      objectReference: {fileID: 840533800}
     - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
       propertyPath: clockHUDObject
       value: 
@@ -8744,7 +8760,6 @@ MonoBehaviour:
   textComponent: {fileID: 1333958029}
   timeController: {fileID: 1379372767}
   includeName: 0
-  textSpeed: 0.1
   dialogueBox: {fileID: 575702327}
 --- !u!114 &1282312021
 MonoBehaviour:

@@ -334,6 +334,144 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 443673596503594638, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
   m_PrefabInstance: {fileID: 840533799}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &403799494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403799499}
+  - component: {fileID: 403799498}
+  - component: {fileID: 403799497}
+  - component: {fileID: 403799496}
+  - component: {fileID: 403799495}
+  m_Layer: 0
+  m_Name: Counter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &403799495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403799494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804c35fd693a8d747bd1fca6f0b21d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatLines: 0
+  NPCName: 
+  DayLines:
+  - The kitchen countertop is scorched. The drawers are all either empty or stuck
+    closed.
+  - Considering the smell filling the room, some animal must have gotten stuck inside
+    and died.
+  SunsetLines:
+  - The kitchen countertop is scorched. The drawers are all either empty or stuck
+    closed.
+  - Considering the smell filling the room, some animal must have gotten stuck inside
+    and died.
+  NightLines:
+  - The counter top is so clean that it hurts to look at. The drawers all slide open
+    eaily, revealing silverware and plates.
+--- !u!114 &403799496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403799494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25859bc3bed7d7548a69c581dd28d182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1402007253}
+  timeController: {fileID: 2002953505}
+  includeName: 0
+  dialogueBox: {fileID: 1502452422}
+--- !u!114 &403799497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403799494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f6f6cda12f44478c59f2156da8dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFloor: 0
+  destinationTransform: {fileID: 645298056}
+--- !u!61 &403799498
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403799494}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.69, y: 2.97}
+  m_EdgeRadius: 0
+--- !u!4 &403799499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403799494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.7, y: -2.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 645298056}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &572169343
 GameObject:
   m_ObjectHideFlags: 0
@@ -5857,6 +5995,42 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1808180385}
   m_SourcePrefab: {fileID: 100100000, guid: cf0cf4420a219d74bb8807057f4cabaa, type: 3}
+--- !u!1 &638763078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7204914268969478735, guid: cf0cf4420a219d74bb8807057f4cabaa, type: 3}
+  m_PrefabInstance: {fileID: 638763077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &645298055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 645298056}
+  m_Layer: 0
+  m_Name: walkTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &645298056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645298055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 403799499}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &690079343
 GameObject:
   m_ObjectHideFlags: 0
@@ -6045,6 +6219,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
+--- !u!1 &840533800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2014095094450911170, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
+  m_PrefabInstance: {fileID: 840533799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!223 &840533801 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 5641287989053423013, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
@@ -6240,6 +6419,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 572169343}
     - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
+      propertyPath: tempSwitch
+      value: 
+      objectReference: {fileID: 638763078}
+    - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
+      propertyPath: timeDisplay
+      value: 
+      objectReference: {fileID: 840533800}
+    - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
       propertyPath: whenToNight
       value: 6
       objectReference: {fileID: 0}
@@ -6350,7 +6537,6 @@ MonoBehaviour:
   textComponent: {fileID: 1402007253}
   timeController: {fileID: 2002953505}
   includeName: 0
-  textSpeed: 0.1
   dialogueBox: {fileID: 1502452422}
 --- !u!114 &1034209922
 MonoBehaviour:
@@ -6536,6 +6722,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 870676544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1304163065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1304163066}
+  m_Layer: 0
+  m_Name: walkTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1304163066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304163065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1713488092}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1379372768 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
@@ -6558,6 +6775,141 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1404200106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1404200111}
+  - component: {fileID: 1404200110}
+  - component: {fileID: 1404200109}
+  - component: {fileID: 1404200108}
+  - component: {fileID: 1404200107}
+  m_Layer: 0
+  m_Name: Oven
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1404200107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404200106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804c35fd693a8d747bd1fca6f0b21d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatLines: 0
+  NPCName: 
+  DayLines:
+  - 'There''s something inside the oven. You can''t even guess what it may have once
+    been: it''s all burnt now. Ashes line the walls of the oven.'
+  SunsetLines:
+  - 'There''s something inside the oven. You can''t even guess what it may have once
+    been: it''s all burnt now. Ashes line the walls of the oven.'
+  NightLines:
+  - The oven is on. Standing near it, you can feel the warmth coming off of the door.
+  - As you open the oven to take a peek, you get hit by a strong smell of herbs and
+    turkey. You're so hungry.
+--- !u!114 &1404200108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404200106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25859bc3bed7d7548a69c581dd28d182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1402007253}
+  timeController: {fileID: 2002953505}
+  includeName: 0
+  dialogueBox: {fileID: 1502452422}
+--- !u!114 &1404200109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404200106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f6f6cda12f44478c59f2156da8dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFloor: 0
+  destinationTransform: {fileID: 2123016038}
+--- !u!61 &1404200110
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404200106}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.46, y: 2.97}
+  m_EdgeRadius: 0
+--- !u!4 &1404200111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404200106}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.26, y: -2.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2123016038}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1409014778 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6513101369798072315, guid: cf0cf4420a219d74bb8807057f4cabaa, type: 3}
@@ -7027,6 +7379,142 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1713488087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713488092}
+  - component: {fileID: 1713488091}
+  - component: {fileID: 1713488090}
+  - component: {fileID: 1713488089}
+  - component: {fileID: 1713488088}
+  m_Layer: 0
+  m_Name: Fridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1713488088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713488087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804c35fd693a8d747bd1fca6f0b21d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatLines: 0
+  NPCName: 
+  DayLines:
+  - A tall fridge. The silver paint has fallen off to reveal a charred interior.
+    The smell of rotten food fills the room.
+  SunsetLines:
+  - A tall fridge. The silver paint has fallen off to reveal a charred interior.
+    The smell of rotten food fills the room.
+  NightLines:
+  - A beautiful fridge. Opening it, you see it's filled with fruit, fish, meat and
+    desserts.
+  - The food makes your mouth water, but you make it a point to not eat any food
+    that appears out of nowhere.
+--- !u!114 &1713488089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713488087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25859bc3bed7d7548a69c581dd28d182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1402007253}
+  timeController: {fileID: 2002953505}
+  includeName: 0
+  dialogueBox: {fileID: 1502452422}
+--- !u!114 &1713488090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713488087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f6f6cda12f44478c59f2156da8dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFloor: 0
+  destinationTransform: {fileID: 1304163066}
+--- !u!61 &1713488091
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713488087}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.65, y: 6.04}
+  m_EdgeRadius: 0
+--- !u!4 &1713488092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713488087}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.51, y: -1.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1304163066}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1762486059
 GameObject:
   m_ObjectHideFlags: 0
@@ -7519,6 +8007,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2123016037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2123016038}
+  m_Layer: 0
+  m_Name: walkTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2123016038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123016037}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1404200111}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8167998083065386013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7596,3 +8115,6 @@ SceneRoots:
   - {fileID: 1762486062}
   - {fileID: 690079345}
   - {fileID: 1034209924}
+  - {fileID: 1713488092}
+  - {fileID: 403799499}
+  - {fileID: 1404200111}

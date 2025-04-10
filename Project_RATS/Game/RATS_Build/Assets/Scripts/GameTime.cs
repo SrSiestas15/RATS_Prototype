@@ -9,8 +9,10 @@ public class GameTime : MonoBehaviour
 {
     public GameObject clockHUDObject;
     public Canvas canvas;
+    public GameObject timeDisplay; 
     TextMeshProUGUI clockText;
     public static float currentHour = 0;
+    private string currentHourText;
     public GameObject tempDay; //switches to night at 5 pm
     public GameObject tempSunset;//switches to day at 10 pm
     public GameObject tempNight;//switches to day at 10 pm
@@ -75,7 +77,7 @@ public class GameTime : MonoBehaviour
         }
 
 
-        if (currentHour >= 11)
+        if (currentHour >= 12)
         {
             StartCoroutine(ResetDay());
         }
@@ -108,32 +110,44 @@ public class GameTime : MonoBehaviour
         switch (currentHour) //this will handle active changes between hours
         {
             case 0:
+                currentHourText = "12 PM";
                 break;
             case 1:
+                currentHourText = "1 PM";
                 break;
             case 2:
+                currentHourText = "2 PM";
                 break;
             case 3:
+                currentHourText = "3 PM";
                 break;
             case 4:
+                currentHourText = "4 PM";
                 break;
             case 5:
+                currentHourText = "5 PM";
                 break;
             case 6:
+                currentHourText = "6 PM";
                 break;
             case 7:
+                currentHourText = "7 PM";
                 break;
             case 8:
+                currentHourText = "8 PM";
                 break;
             case 9:
+                currentHourText = "9 PM";
                 break;
             case 10:
+                currentHourText = "10 PM";
                 break;
             case 11:
+                currentHourText = "11 PM";
                 break;
         }
 
-        clockText.text = currentHour.ToString();
+        clockText.text = currentHourText;
     }
 
     // Update is called once per frame
@@ -144,8 +158,9 @@ public class GameTime : MonoBehaviour
 
     IEnumerator ResetDay() //types out each character
     {
+        timeDisplay.SetActive(false);
         tempReset.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         
         PlayerPrefs.SetFloat("currentHour", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -154,7 +169,7 @@ public class GameTime : MonoBehaviour
     IEnumerator ToNight() //types out each character
     {
         tempSwitch.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         tempSwitch.SetActive(false);
         XHoursLater(1);
     }

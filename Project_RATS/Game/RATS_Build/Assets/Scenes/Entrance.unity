@@ -7892,18 +7892,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 42853063886594592, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 42853063886594592, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 481
-      objectReference: {fileID: 0}
-    - target: {fileID: 42853063886594592, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 395
-      objectReference: {fileID: 0}
     - target: {fileID: 1545667923102955415, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7988,31 +7976,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1379372768}
-    - target: {fileID: 3578036728318004057, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: XHoursLater
-      objectReference: {fileID: 0}
     - target: {fileID: 5700223057168392816, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
       propertyPath: m_Name
       value: UIPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 6325250143289533424, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7882791882680370952, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1379372768}
-    - target: {fileID: 7882791882680370952, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: XHoursLater
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 520699542237737083, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
-    - {fileID: 5228131393813244640, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
-    - {fileID: 5270223835817817661, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
@@ -8342,6 +8315,10 @@ PrefabInstance:
       propertyPath: tempSwitch
       value: 
       objectReference: {fileID: 2095068713}
+    - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
+      propertyPath: timeDisplay
+      value: 
+      objectReference: {fileID: 2134697955}
     - target: {fileID: 4549803140659897198, guid: 8b2f3f672caba21429f0983cae99ce71, type: 3}
       propertyPath: whenToNight
       value: 6
@@ -9225,6 +9202,11 @@ SpriteRenderer:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7204914268969478735, guid: cf0cf4420a219d74bb8807057f4cabaa, type: 3}
   m_PrefabInstance: {fileID: 638763077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2134697955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2014095094450911170, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
+  m_PrefabInstance: {fileID: 840533799}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
