@@ -358,7 +358,6 @@ MonoBehaviour:
   textComponent: {fileID: 371000605}
   timeController: {fileID: 1506116419}
   includeName: 0
-  textSpeed: 0.1
   dialogueBox: {fileID: 743200860}
 --- !u!114 &265311534
 MonoBehaviour:
@@ -451,82 +450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &514217151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 514217153}
-  - component: {fileID: 514217152}
-  m_Layer: 0
-  m_Name: TelemetryLogs
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &514217152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514217151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 286038c7bf69e8046b2933b67bf376bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Settings>k__BackingField: {fileID: 11400000, guid: 61350abcb9a8f404ba41b35e3e180b52, type: 2}
-  _section: Entrance
-  OnConnectionSuccess:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 733252181}
-        m_TargetAssemblyTypeName: SessionDisplay, Assembly-CSharp
-        m_MethodName: onConnectionSucces
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnConnectionFail:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 733252181}
-        m_TargetAssemblyTypeName: SessionDisplay, Assembly-CSharp
-        m_MethodName: OnConnectionFail
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &514217153
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514217151}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534164034
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,17 +5923,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1808180385}
   m_SourcePrefab: {fileID: 100100000, guid: cf0cf4420a219d74bb8807057f4cabaa, type: 3}
---- !u!114 &733252181 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2269752092077220789, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
-  m_PrefabInstance: {fileID: 840533799}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 499825f093f4e2f439be51c29962055a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &743200860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6325250143289533424, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
@@ -8100,6 +8012,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 520699542237737083, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
     - {fileID: 5228131393813244640, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
+    - {fileID: 5270223835817817661, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 583fb959c37abb442990179d36f4a32d, type: 3}
@@ -8542,7 +8455,6 @@ MonoBehaviour:
   textComponent: {fileID: 371000605}
   timeController: {fileID: 1506116419}
   includeName: 0
-  textSpeed: 0.1
   dialogueBox: {fileID: 743200860}
 --- !u!114 &1043413586
 MonoBehaviour:
@@ -8747,7 +8659,6 @@ MonoBehaviour:
   textComponent: {fileID: 371000605}
   timeController: {fileID: 1506116419}
   includeName: 0
-  textSpeed: 0.1
   dialogueBox: {fileID: 743200860}
 --- !u!114 &1084640872
 MonoBehaviour:
@@ -9105,7 +9016,6 @@ MonoBehaviour:
   textComponent: {fileID: 371000605}
   timeController: {fileID: 1506116419}
   includeName: 0
-  textSpeed: 0.1
   dialogueBox: {fileID: 743200860}
 --- !u!1 &1791807288
 GameObject:
@@ -9332,4 +9242,3 @@ SceneRoots:
   - {fileID: 1542671732}
   - {fileID: 265311536}
   - {fileID: 1084854252}
-  - {fileID: 514217153}

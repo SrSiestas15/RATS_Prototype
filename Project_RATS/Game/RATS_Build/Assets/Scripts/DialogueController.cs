@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DialogueController : MonoBehaviour
@@ -20,8 +18,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] bool includeName;
     private string withName;
     
-    //public string[] lines; //these are the actual lines of dialogue displayed on-screen (assign through inspector)
-    public float textSpeed; //intervals in seconds between each character displayed
+    private float textSpeed = .005f; //intervals in seconds between each character displayed
 
     private int index = 0; //what line of dialogue is currently displayed
     //public GameObject dialogueBox; //references the UI to enable and disable it
@@ -70,18 +67,21 @@ public class DialogueController : MonoBehaviour
     void Update()
     {
         //Debug.Log(timeScript.WhatTimeIsIt());
-        if (Input.GetMouseButtonDown(0) && PlayerController.currentState == PlayerController.States.talking && !EventSystem.current.IsPointerOverGameObject()) //text only runs if the player is NOT MOVING!
+        if (lines.Count > 0)
         {
-                if (textComponent.text == withName + lines[index])
-                {
-                    dialogueBox.SetActive(true);
-                    NextLine();
-                }
-                else if(textComponent.text != string.Empty)
-                {
-                    StopAllCoroutines();
-                    textComponent.text = withName + lines[index];
-                }
+            if (Input.GetMouseButtonDown(0) && PlayerController.currentState == PlayerController.States.talking && !EventSystem.current.IsPointerOverGameObject()) //text only runs if the player is NOT MOVING!
+            {
+                    if (textComponent.text == withName + lines[index])
+                    {
+                        dialogueBox.SetActive(true);
+                        NextLine();
+                    }
+                    else if(textComponent.text != string.Empty)
+                    {
+                        StopAllCoroutines();
+                        textComponent.text = withName + lines[index];
+                    }
+            }
         }
     }
 

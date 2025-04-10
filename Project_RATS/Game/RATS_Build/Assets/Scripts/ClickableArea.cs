@@ -33,7 +33,6 @@ public class ClickableArea : MonoBehaviour
 
     private void OnMouseDown()
     {
-        TelemetryLogger.Log(this, gameObject.name, camera.ScreenToWorldPoint(Input.mousePosition));
 
         if (!EventSystem.current.IsPointerOverGameObject())
         {
@@ -43,7 +42,6 @@ public class ClickableArea : MonoBehaviour
                 {
                     destinationPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
 
-                    TelemetryLogger.Log(this, "Floor: Clicks", destinationPos);
                 }
                 else
                 {

@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
         transform.position = spawnPos; 
         clickDestination = transform.position; //makes the first destination the current position    
         playerAnimator = GetComponentInChildren<Animator>();
+        currentState = States.nothing;
     }
 
     void Update()
